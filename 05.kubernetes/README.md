@@ -1,30 +1,13 @@
-# Kubernetes and Microservices
-
-## Images
-
-You can reuse these images instead of creating and pushing new container images
-
-- Currency Exchange Service 
-	- v11 - in28min/mmv3-currency-exchange-service:0.0.11-SNAPSHOT
-  - v12 - in28min/mmv3-currency-exchange-service:0.0.12-SNAPSHOT
-- Currency Conversion Service
-	- in28min/mmv3-currency-conversion-service:0.0.11-SNAPSHOT
-    - Uses CURRENCY_EXCHANGE_SERVICE_HOST
-  - in28min/mmv3-currency-conversion-service:0.0.12-SNAPSHOT
-    - Uses CURRENCY_EXCHANGE_URI
+- https://github.com/lekhrajdinkar/03-spring-cloud-v2/edit/main/Notes/03_with_kubernetes.md
 
 ## URLS
-
-#### Currency Exchange Service
 - http://localhost:8000/currency-exchange/from/USD/to/INR
-
-#### Currency Conversion Service
 - http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+- update url with minikube tunnelling
 
-
-#### Commands
+---
+## Commands (ignore)
 ```
-
 docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
 
 kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
