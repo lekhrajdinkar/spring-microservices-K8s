@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: conversion-ms-with-k8s-deploy
+  name: conversion-ms-with-k8s-deploy
+  namespace: ms-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: conversion-ms-with-k8s-deploy
+  template:
+    metadata:
+      labels:
+        app: conversion-ms-with-k8s-deploy
+    spec:
+      containers:
+        - image: lekhrajdinkar18/spring-ms-with-k8s-currency-conversion-service:1.0.2
+          # lekhrajdinkar18/spring-ms-with-k8s-currency-conversion-service:1.0.2
+          name: spring-ms-with-k8s-currency-conversion-service
+          env:
+            - name: CURRENCY_EXCHANGE_SERVICE_HOST
+              value: exchange-ms-with-k8s-deploy

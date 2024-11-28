@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2024-11-27T23:46:55Z"
+  labels:
+    kubernetes.io/metadata.name: ms-k8s
+  name: ms-k8s
+  resourceVersion: "115783"
+  uid: c28c0829-22c9-463e-ad94-e6584b496069
+spec:
+  finalizers:
+    - kubernetes
+status:
+  phase: Active
